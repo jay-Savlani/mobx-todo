@@ -1,4 +1,5 @@
 import { makeAutoObservable, configure } from "mobx";
+import data from "./todos.json";
 
 configure({
   enforceActions: "never",
@@ -13,9 +14,18 @@ export type todo = {
 class MobxStore {
   todos: todo[] = [];
   newTodo: string = " ";
+  loading: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  load(): void {
+    this.loading = true;
+    setTimeout(() => {
+      this.todos = data;
+      this.loading = false;
+    }, 1500);
   }
 
   addTodo(): void {

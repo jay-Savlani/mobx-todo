@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "task": "Learn redux saga",
+    "done": false
+  },
+  {
+    "id": 2,
+    "task": "Learn redux toolkit",
+    "done": true
+  },
+  {
+    "id": 3,
+    "task": "Learn chakra",
+    "done": false
+  }
+]
